@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block content %}
+
+<header>
+  <div>
+    <h1 class="">YASEN SOTIROV</h1>
+    <h3>Software developer</h3>
+  </div>
+  <img src="/static/avatar.jpg" alt="avatar" />
+</header>
+
+<main>
+  <div class="section-container">
+    <div class="title-with-date">
+      <h3>SUMMARY</h3>
+    </div>
+    <p>
+      I am a practical person who values common sense and pragmatic solutions.
+      From a young age, I have been driven by a strong sense of curiosity and a
+      love of learning. I believe that attention to detail and precision are key
+      to success.
+    </p>
+  </div>
+
+  <div class="section-container">
+    <div class="title-with-date">
+      <h3>TECHNOLOGIES</h3>
+    </div>
+
+    <!-- TECHNOLOGIES -->
+    <ul class="skill-list">
+      {% for tech, details in data.items() %}
+      <li class="skill">
+        <div class="skill-name">{{ tech }}</div>
+        <ul class="skill-description">
+          {% for detail in details %}
+          <li>{{ detail }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% endblock %}
+</main>

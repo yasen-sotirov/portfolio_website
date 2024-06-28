@@ -1,0 +1,45 @@
+{% extends "base.html" %} 
+{% block content %}
+
+  <header>
+    <h1>CONTACTS</h1>
+  </header>
+
+  <main>
+    <div class="contacts">
+      <p id="tel"><i class="fa-solid fa-phone"></i> +359 886 921 385</p>
+      <p id="mail">
+        <i class="fa-solid fa-envelope"></i>
+        <a
+          title="mail to: ia.sotirov@gmail.com"
+          href="mailto:ia.sotirov@gmail.com"
+          >ia.sotirov@gmail.com</a
+        >
+      </p>
+      <p>
+        <i class="fa-brands fa-linkedin"></i>
+        <a
+          id="linkedin"
+          title="Visit my LinkedIn profile"
+          target="_blank"
+          href="https://www.linkedin.com/in/yasen-sotirov/"
+          >linkedin</a
+        >
+      </p>
+      <p>
+        <i class="fa-brands fa-square-github"></i> 	
+        <a
+          id="github"
+          target="_blank"
+          title="Visit my GitHub profile"
+          href="https://github.com/yasen-sotirov"
+          >Github</a
+        >
+      </p>
+      <p id="location">
+        <i class="fa-sharp fa-solid fa-location-dot"></i> Sofia, Bulgaria
+      </p>
+    </div>
+  </main>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends "base.html" %} 
+{% block content %}
+
+  <header>
+    <h1>EXPERIENCE</h1>
+  </header>
+
+  <main>
+    {% for job in data %}
+    <div class="section-container">
+      <div class="title-with-date">
+        <h3>{{ job["title"]}}</h3>
+        <div class="date">
+          <time datetime="job['start date']">{{ job['start month'] }}/{{ job['start year']}}</time>
+          -
+          <time datetime="job['end date']">{{ job['end month'] }}/{{ job['end year']}}</time>
+        </div>
+      </div>
+      <div>
+        <p>{{ job['description']}}</p>
+        <ul class="ul-bullet">
+          {% for bullet in job['bullets'] %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div>
+      <h2>EDUCATION</h2>
+    </div>
+
+    <div class="section-container">
+      <div class="title-with-date">
+        <h3>Telerik Academy</h3>
+        <div class="date">
+          <time datetime="2023-06-01">06/2023</time>
+          -
+          <time datetime="2023-12-01">12/2023</time>
+        </div>
+      </div>
+
+      <p>
+        Six-month hands-on boot-camp program, featuring practical assignments,
+        workshops, hackathons, and comprehensive end-to-end projects. Developed
+        solid technical and soft skills using cutting-edge tools.
+      </p>
+      <ul class="ul-bullet">
+        <li>
+          <a target="_blank" href="../static/sertificate.jpg">show certificate</a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://learn.telerikacademy.com/mod/customcert/verify_certificate.php?contextid=74527&code=6wyVSPKQ8M&qrcode=1"
+          >
+            check certificate
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section-container">
+      <div class="title-with-date">
+        <h3 class="projectName">Master's degree in Architecture</h3>
+        <div class="date">
+          <time datetime="2004-10-01">10/2004</time>
+          -
+          <time datetime="2011-02-01">02/2011</time>
+        </div>
+      </div>
+      <p>
+        Six-year comprehensive architectural education, providing a deep
+        understanding of architectural design principles, urban planning, and
+        sustainable architecture. Gained practical experience through various
+        design projects, workshops, and collaborative initiatives.
+      </p>
+      <ul class="ul-bullet">
+        <li>
+          <p>New Bulgarian University</p>
+        </li>
+        <li>diploma - on demand</li>
+      </ul>
+    </div>
+
+    <div class="cv-container">
+      <a href="../static/CV.pdf" target="_blank">Download CV as pdf</a>
+    </div>
+  </main>
+{% endblock %}

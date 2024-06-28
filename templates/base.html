@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/static/output.css" rel="stylesheet" />
+    <title>{% block title %}Home{% endblock %}</title>
+  </head>
+
+  <nav class="bg-slate-100">
+    <a
+      href="{{ url_for('home') }}"
+      class="{{ 'active' if page == 'home' else '' }}"
+      >about</a
+    >
+    <a
+      href="{{ url_for('projects') }}"
+      class="{{ 'active' if page == 'projects' else '' }}"
+      >projects</a
+    >
+    <a
+      href="{{ url_for('experience') }}"
+      class="{{ 'active' if page == 'experience' else '' }}"
+      >experience</a
+    >
+    <a
+      href="{{ url_for('contacts') }}"
+      class="{{ 'active' if page == 'contacts' else '' }}"
+      >contacts</a
+    >
+  </nav>
+
+  <body>
+    {% block content %}{% endblock %}
+
+    <script
+      src="https://kit.fontawesome.com/f2f63fec08.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <footer>v2.0</footer>
+  </body>
+</html>

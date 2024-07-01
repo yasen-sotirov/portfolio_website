@@ -2,11 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="/static/output.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Yasen Sotirov works/portfolio/cv Projects"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
     <title>{% block title %}Home{% endblock %}</title>
   </head>
 
-  <nav class="bg-slate-100">
+  <nav class="navbar">
     <a
       href="{{ url_for('home') }}"
       class="{{ 'active' if page == 'home' else '' }}"

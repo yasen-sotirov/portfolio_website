@@ -1,0 +1,318 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: Bitter;
+  src: url(assets/Bitter.ttf);
+}
+
+/* Global styles */
+:root {
+  --white: #fff;
+  --black: #0f172a;
+  --gray: #475569;
+  --blue: #0281e9;
+}
+
+body {
+  color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 22px;
+  margin: 20px auto;
+  font-size: 1.125rem;
+  width: 600px;
+}
+
+h1,
+h2 {
+  color: var(--black);
+  font-family: Bitter;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: var(--blue);
+  font-family: Bitter;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Page specific styles */
+
+/* Navbar start */
+.navbar {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--black);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--black);
+  width: 100px;
+}
+
+.navbar a:hover {
+  font-weight: bold;
+}
+
+.navbar a.active {
+  font-weight: bold;
+}
+/* Navbar end */
+
+/* Header start */
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+header h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black);
+  margin-top: 20px;
+}
+
+header img {
+  width: 180px;
+}
+
+/* Header end */
+/* list items */
+.skill {
+  padding-bottom: 18px;
+}
+
+ul.skill-list li {
+  align-items: center;
+  justify-content: space-between;
+  width: 550px;
+}
+
+ul.skill-list li .skill-name {
+  width: 100px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+ul.skill-description {
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.language {
+  line-height: 26px;
+  margin-left: 16px;
+  margin-bottom: 50px;
+}
+
+.title-with-date {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+
+.title-with-date .date {
+  font-size: 14px;
+}
+
+/* Section Container start */
+
+.section-container:not(:last-child) {
+  margin-bottom: 48px;
+}
+
+ul.ul-bullet {
+  margin-left: 26px;
+  list-style-type: disc;
+}
+ul.ul-bullet li {
+  line-height: 24px;
+}
+
+.fa-brands.fa-github {
+  scale: 0.8;
+  position: relative;
+  left: 6px;
+}
+/* Section Container end */
+
+/* Contacts start */
+.contacts {
+  margin: 50px 0 50px 20px;
+  font-size: 18px;
+  line-height: 33px;
+}
+/* Contacts end */
+
+.cv-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.cv-container a {
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 16px;
+  line-height: 36px;
+  padding: 0 24px;
+}
+.cv-container a:hover {
+  background-color: var(--gray);
+}
+
+/* Footer start */
+footer {
+  color: var(--black);
+  font-size: 13px;
+  text-align: right;
+}
+/* Footer end */

@@ -15,9 +15,6 @@ technologies = {
         "BASICS: selectors, properties, box model, styling text, basic layout, simple transitions;",
         "INTERMEDIATE: pseudo-classes/elements, positioning, flexbox;",
     ],      
-    "TailwindCSS": [
-        "BASICS: basic utility classes, responsive design, pseudo-classes, html styling, flexbox;",
-    ],      
     "Flask": [
         "BASICS: structure, basic routing (path query), request / response models pydantic, HTTP methods;",
     ],      
@@ -45,7 +42,21 @@ projects = [
     "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_2.0",  
     },
     {  
-    "name": "Weather App",
+    "name": "To Do List App",
+    "start date": "2024-06-14",
+    "start month": "06",
+    "start year": "2024",
+    "end date": "2024-06-15",
+    "end month": "06",
+    "end year": "2024",
+    "description": "Weather App: Check the weather, humidity, and wind speed for any city worldwide. Data is provided by www.openweathermap.org",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "readme": "https://github.com/yasen-sotirov/todo_list/blob/main/README.md",
+    "source code": "https://github.com/yasen-sotirov/todo_list",
+    "run code": "https://yasen-sotirov.github.io/todo_list/"
+    },
+    {  
+    "name": "Weather Forecast App",
     "start date": "2024-06-04",
     "start month": "06",
     "start year": "2024",
@@ -54,10 +65,12 @@ projects = [
     "end year": "2024",
     "description": "Weather App: Check the weather, humidity, and wind speed for any city worldwide. Data is provided by www.openweathermap.org",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/weather_app",
+    "readme": "https://github.com/yasen-sotirov/weather_forecast/blob/main/README.md",
+    "source code": "https://github.com/yasen-sotirov/weather_forecast",
+    "run code": "https://yasen-sotirov.github.io/weather_forecast/"
     },
     {
-    "name": "Dice game",
+    "name": "Roll The Dice Game",
     "start date": "2024-05-16",
     "start month": "05",
     "start year": "2024",
@@ -69,7 +82,9 @@ projects = [
         you loos your points, and the next player goes. First to reach 100
         points wins.''',
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/dice_game",
+    "readme": "https://github.com/yasen-sotirov/roll_the_dice_game/blob/master/README.md",
+    "source code": "https://github.com/yasen-sotirov/roll_the_dice_game",
+    "run code": "https://yasen-sotirov.github.io/roll_the_dice_game/",
     },
     {
     "name": "Guess the number",
@@ -81,19 +96,8 @@ projects = [
     "end year": "2024",
     "description": "Uncover the secret number (1-100) within 10 attempts.",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/guess_gam",
-    },
-    {
-    "name": "Portfolio website 1.0",
-    "start date": "2024-03-011",
-    "start month": "03",
-    "start year": "2024",
-    "end date": "2024-03-20",
-    "end month": "03",
-    "end year": "2024",
-    "description": "Static portfolio website with four pages",
-    "technologies": ["HTML", "CSS"],
-    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_1.0",
+    "readme": "https://github.com/yasen-sotirov/guess_the_number/blob/main/README.md",
+    "source code": "https://github.com/yasen-sotirov/guess_the_number",
     },
     {
     "name": "Match Score",
@@ -104,8 +108,9 @@ projects = [
     "end month": "11",
     "end year": "2023",
     "description": "Solution that streamline the organization and management of sport events. Implemented features for one-on-one matches and tournaments. Intensive work in a group of three with a horizontal hierarchy.",
-    "technologies": ["Python", "FastAPI", "MariaDB", "Pydantic"],
-    "source code": "https://github.com/yasen-sotirov/Y_projects/tree/main/match_score",
+    "technologies": ["Python", "FastAPI", "MariaDB", "SQL", "Pydantic"],
+    "readme": "https://github.com/yasen-sotirov/match_score/blob/main/README.md",
+    "source code": "https://github.com/yasen-sotirov/match_score",
     },
     {
     "name": "Forum app",
@@ -117,10 +122,11 @@ projects = [
     "end year": "2023",
     "description": "Design and implementation of a forum system. Providing a RESTfull API for use by various clients.",
     "technologies": ["Python", "FastAPI", "Pydantic"],
-    "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/forum_app",
+    "readme": "https://github.com/yasen-sotirov/forum_app/blob/main/README.md",
+    "source code": "https://github.com/yasen-sotirov/forum_app",
     },
     {
-    "name": "Logistics fleet app",
+    "name": "Logistics Fleet App",
     "start date": "2023-09-06",
     "start month": "09",
     "start year": "2023",
@@ -129,7 +135,8 @@ projects = [
     "end year": "2023",
     "description": "Designed and implemented a logistics console application for efficient management of package deliveries between hubs located in various cities. Intensive work in a group of three with a horizontal hierarchy",
     "technologies": ["Python", "FastAPI", "Pydantic"],
-    "source code": "https://github.com/yasen-sotirov/Y_projects/tree/main/logistic_fleet",
+    "readme": "https://github.com/yasen-sotirov/logistic_fleet/blob/main/README.md",
+    "source code": "https://github.com/yasen-sotirov/logistic_fleet",
     }
 ]
 

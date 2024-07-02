@@ -53,7 +53,7 @@ projects = [
     "end year": "2024",
     "description": "Weather App: Check the weather, humidity, and wind speed for any city worldwide. Data is provided by www.openweathermap.org",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "complexity": "simple task",
+    "complexity": "simple",
     "readme": "https://github.com/yasen-sotirov/todo_list/blob/main/README.md",
     "source code": "https://github.com/yasen-sotirov/todo_list",
     "run code": "https://yasen-sotirov.github.io/todo_list/"
@@ -68,7 +68,7 @@ projects = [
     "end year": "2024",
     "description": "Weather App: Check the weather, humidity, and wind speed for any city worldwide. Data is provided by www.openweathermap.org",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "complexity": "simple task",
+    "complexity": "simple",
     "readme": "https://github.com/yasen-sotirov/weather_forecast/blob/main/README.md",
     "source code": "https://github.com/yasen-sotirov/weather_forecast",
     "run code": "https://yasen-sotirov.github.io/weather_forecast/"
@@ -86,7 +86,7 @@ projects = [
         you loos your points, and the next player goes. First to reach 100
         points wins.''',
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "complexity": "simple task",
+    "complexity": "simple",
     "readme": "https://github.com/yasen-sotirov/roll_the_dice_game/blob/master/README.md",
     "source code": "https://github.com/yasen-sotirov/roll_the_dice_game",
     "run code": "https://yasen-sotirov.github.io/roll_the_dice_game/",
@@ -101,7 +101,7 @@ projects = [
     "end year": "2024",
     "description": "Uncover the secret number (1-100) within 10 attempts.",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "complexity": "simple task",
+    "complexity": "simple",
     "readme": "https://github.com/yasen-sotirov/guess_the_number/blob/main/README.md",
     "source code": "https://github.com/yasen-sotirov/guess_the_number",
     "run code": "https://yasen-sotirov.github.io/guess_the_number/",

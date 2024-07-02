@@ -19,9 +19,9 @@
 
     <!-- COMPLEXITY -->
     <div class="filter">
-      <span>complexity:</span>
+      <span>project type:</span>
 
-      {% for comp in ['simple task', 'advanced'] %}
+      {% for comp in ['simple', 'advanced'] %}
       <form method="POST" action="/complexity/{{ comp }}">
         <button type="submit">{{ comp }}</button>
       </form>

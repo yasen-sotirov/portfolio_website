@@ -12,7 +12,7 @@ from data import info
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
 
 
-
+# FUNCTIONS
 def used_tech():
     used_tech = []
     for tech in info.technologies.keys():
@@ -23,12 +23,14 @@ def used_tech():
 
 
 
+# ROUTERS
+# HOME
 @app.route('/')
 def home():
     return render_template('home.html', data=info.technologies, page='home')
 
 
-
+# PROJECTS
 @app.route('/projects')
 def projects():
     used = used_tech()
@@ -39,9 +41,9 @@ def projects():
                            used_tech=used)
 
 
-
+# FILTER TECHNOLOGIES
 @app.route('/filter/<current_tech>', methods=['POST'])
-def button_click(current_tech):
+def button_filter(current_tech):
     used = used_tech()   
     filtered_projects_ls = []
     for project in info.projects:
@@ -54,13 +56,30 @@ def button_click(current_tech):
                            used_tech=used)
 
 
+# PROJECT COMPLEXITY
+@app.route('/complexity/<comp_tag>', methods=['POST'])
+def button_complexity(comp_tag):
+    used = used_tech() 
+    filtered_projects_ls = []
+    for project in info.projects:
+        if comp_tag == project['complexity']:
+            filtered_projects_ls.append(project)
 
+    return render_template('projects.html', 
+                           data=filtered_projects_ls, 
+                           tag=comp_tag, 
+                           page='projects', 
+                           used_tech=used)
+
+
+# EXPERIENCE
 @app.route('/experience')
 def experience():
     return render_template('experience.html', data=info.experience, page='experience')
 
 
 
+# CONTACTS
 @app.route('/contacts')
 def contacts():
     return render_template('contacts.html', page='contacts')

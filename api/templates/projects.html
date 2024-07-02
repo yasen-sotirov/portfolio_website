@@ -5,17 +5,37 @@
 </header>
 
 <main>
-  <div>
-    <span>filter by:</span>
-    {% for current_tech in used_tech %}
-    <form method="POST" action="/filter/{{ current_tech }}">
-      <button type="submit">{{ current_tech }}</button>
-    </form>
-    {% endfor %}
+  <div class="filiation">
+    <!-- FILTERS -->
+    <div class="filter">
+      <span>filter by:</span>
+
+      {% for current_tech in used_tech %}
+      <form method="POST" action="/filter/{{ current_tech }}">
+        <button type="submit">{{ current_tech }}</button>
+      </form>
+      {% endfor %}
+    </div>
+
+    <!-- COMPLEXITY -->
+    <div class="filter">
+      <span>complexity:</span>
+
+      {% for comp in ['simple task', 'advanced'] %}
+      <form method="POST" action="/complexity/{{ comp }}">
+        <button type="submit">{{ comp }}</button>
+      </form>
+      {% endfor %}
+    </div>
+
+    <!-- RESULTS -->
+    <div class="result">
+      result for:
+      <span>{{ tag }}</span>
+    </div>
   </div>
 
-  <p>result for: {{ tag }}</p>
-
+  <!-- PROJECT -->
   {% for project in data %}
   <div class="section-container">
     <div class="title-with-date">
@@ -31,6 +51,7 @@
       </div>
     </div>
 
+    <!-- DESCRIPTION & BULLETS -->
     <p>{{ project['description']}}</p>
     <ul class="ul-bullet">
       <li>
@@ -38,6 +59,10 @@
         {% for tech in project['technologies'] %}
         <span>{{ tech }}</span>
         {% endfor %}
+      </li>
+
+      <li>
+        <span>complexity: {{ project['complexity']}}</span>
       </li>
 
       <li>

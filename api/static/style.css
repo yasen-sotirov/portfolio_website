@@ -157,9 +157,9 @@ body {
 h1,
 h2 {
   color: var(--black);
-  font-family: Bitter;
+  font-family: Roboto slab;
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 42px;
 }
 
@@ -169,9 +169,9 @@ h2 {
 
 h3 {
   color: var(--blue);
-  font-family: Bitter;
+  font-family: Roboto slab;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Page specific styles */
@@ -201,6 +201,45 @@ h3 {
 }
 /* Navbar end */
 
+/* Filtration start */
+.filiation {
+  margin-bottom: 42px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.filter button {
+  margin-left: 5px;
+  border: 0;
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  border-radius: 5px;
+}
+
+.filter button:hover {
+  background-color: #e5e5e5;
+}
+
+.filter span {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.result {
+  font-weight: 600;
+}
+
+.result span {
+  font-weight: 100;
+  margin-left: 12px;
+}
+/* Filtration end */
+
 /* Header start */
 header {
   display: flex;
@@ -212,7 +251,7 @@ header {
 header h3 {
   font-size: 24px;
   font-weight: 500;
-  color: var(--black);
+  /* color: var(--black); */
   margin-top: 20px;
 }
 

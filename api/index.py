@@ -1,5 +1,12 @@
+import os
+import sys
+
+here = os.path.dirname(__file__)
+
+sys.path.append(os.path.join(here, '..'))
+
 from flask import Flask, request, jsonify, session, make_response, render_template
-import info
+from data import info
 
 
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')

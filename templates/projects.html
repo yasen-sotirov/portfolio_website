@@ -39,10 +39,21 @@
         <span>{{ tech }}</span>
         {% endfor %}
       </li>
+
+      <li>
+        <a target="_blank" href="{{ project['readme'] }}">readme</a>
+      </li>
+
       <li>
         <a target="_blank" href="{{ project['source code'] }}">source code</a
         ><i class="fa-brands fa-github"> </i>
       </li>
+
+      {% if "run code" in project %}
+      <li>
+        <a target="_blank" href="{{ project['run code'] }}">run code</a>
+      </li>
+      {% endif %}
     </ul>
   </div>
   {% endfor %}

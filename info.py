@@ -30,7 +30,7 @@ technologies = {
 
 projects = [
     {
-    "name": "Portfolio website 2.0",
+    "name": "Portfolio website",
     "start date": "2024-06-22",
     "start month": "05",
     "start year": "2024",
@@ -39,6 +39,7 @@ projects = [
     "end year": "2024",
     "description": "Dynamic portfolio website with four pages",
     "technologies": ["Python", "Flask", "HTML", "TailwindCSS"],
+    "readme": "https://github.com/yasen-sotirov/portfolio_website/blob/master/README.md",
     "source code": "https://github.com/yasen-sotirov/personal_projects/tree/main/portfolio_website_2.0",  
     },
     {  
@@ -98,6 +99,7 @@ projects = [
     "technologies": ["JavaScript", "HTML", "CSS"],
     "readme": "https://github.com/yasen-sotirov/guess_the_number/blob/main/README.md",
     "source code": "https://github.com/yasen-sotirov/guess_the_number",
+    "run code": "https://yasen-sotirov.github.io/guess_the_number/",
     },
     {
     "name": "Match Score",

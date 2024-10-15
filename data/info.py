@@ -1,30 +1,33 @@
-technologies = {
-    "Python": [
-        "CORE: variables, scope, functions, loop, linear data structures, conditional, debugging, errors handling, file handling;",
-        "DSA: linked list, hash table, stack, queue, tree, complexity, searching and sorting algorithms, recursion;",
-        "OOP: class, object, methods, comprehensions, lambda, inheritance, encapsulation, polymorphism, composition, SOLID, data hiding;",
-        "WEB: API, database, SQL, MVC, authentication, authorization, dependency injection;",
-    ],
-    "JavaScript": [  
-        "CORE: variables, data types, operators, conditionals, scope, loops, functions, common methods, scope, DOM manipulation, event handling, basic debugging;"
-    ],
-    "HTML" :[
-        "BASICS: structure, tags, attributes, lists (+ nested), tables, forms, basics meta tags;",
-    ],
-    "CSS": [
-        "BASICS: selectors, properties, box model, styling text, basic layout, simple transitions;",
-        "INTERMEDIATE: pseudo-classes/elements, positioning, flexbox;",
-    ],      
-    "Flask": [
-        "BASICS: structure, basic routing (path query), request / response models pydantic, HTTP methods;",
-    ],      
-    "PostgreSQL": [
-        "BASICS: basic SQL commands/querying (incl. join, union), data types, creating and managing databases/tables, relations, functions;",
-    ],      
-    "Linux": [
-        "My personal computer runs on Linux;",
-    ],
+tech_data = {
+    "проектиране и изготвяне на пълна проектно-сметна документация във фаза ИП, ТП, РП;",
+    "изготвяне проекти по част ПУСО;",
+    "изготвяне на проекти по част Пожарна безопасност, вкл. Евакуационни схеми;",
+    "изготвяне на 3D визуализации и клипове;",      
+}
 
+
+soft_data = {
+    "Archicad": [
+        "визуализации;",
+        "автоматична документация;",
+    ],
+    "Autocad": [  
+        "90%",
+        "създаване на динамични блокове и блокове със свързани property"
+    ],
+    "Lumion" :[
+        "интериорни и екстериорни визуализации;",
+        "видео клипове"
+    ],
+    "Photoshop": [
+        "post processing;",
+    ],      
+    "Excel, Word": [
+        "таблици за автоматично калкулиране;",
+    ],      
+    "3DS Max": [
+        "изграждане на комплексни аморфни форми;",
+    ], 
 }
 
 
@@ -151,24 +154,55 @@ projects = [
 ]
 
 experience = [
-{
-    "title": "Architect",
-    "start date": "2016-08-01",
-    "start month": "08",
-    "start year": "2016",
-    "end date": "2023-06-01",
-    "end month": "06",
-    "end year": "2023",
-    "description": "Architectural design and building renovation. Experienced with public procurement and collaborating with clients, engineers, and construction teams.",
-    "bullets": [
-    "Leading a team of 5 engineers.",
-    "Fully completed projects - 43.",
-    "Mentoring 3 interns.",
-    "Weekly communication with clients.",
-    "Contribution: Implementing automated systems and processes reducing time by up to 70%.",
-    ]
-},
-
+    {
+        "title": "„Селко 7“ ЕООД",
+        "start date": "2016-09-01",
+        "start month": "09",
+        "start year": "2016",
+        "end date": "2023-06-01",
+        "end month": "06",
+        "end year": "2023",
+        "description": "Дейност: проектиране на жилищни, обществени и промишлени сгради, вкл. реконструкции, саниране, технически паспорти.",
+        "bullets": [
+            "извършване на огледи, обсъждания и архитектурни заснемания;",
+            "управление на цялостния процес по проектиране във фази ИП, РП, ТП, вкл. комуникация с възложителя, организиране и управление на екип от специалисти и инженери;",
+            "изготвяне на проектно - сметна документация;",
+            "автоматизация на процеси;",
+            "изработка и представяне на интерактивни презентации вкл. 3D",
+        ]
+    },
+    {
+        "title": "„Хаусмайстер“ AД,",
+        "start date": "2013-03-01",
+        "start month": "03",
+        "start year": "2013",
+        "end date": "2016-03-01",
+        "end month": "03",
+        "end year": "2016",
+        "description": "Дейност: проектиране на жилищни, обществени и промишлени сгради, вкл. реконструкции, саниране, технически паспорти.",
+        "bullets": [
+            "извършване на огледи, заснемания, офериране, КСС;",
+            "участие в проектирането и изчертаване на интериорни решения;",
+            "автоматизация на процеси;",
+            "изготвяне на статистики и отчети;",
+            "изработка на презентации и 3D визуализации;",
+        ]
+    },
+        {
+        "title": "арх. Валентина Генова, арх. Диана Андреева, арх. Иван Тончев, арх. Емил Христов, арх. Михаил Стойчев",
+        "title": "арх. Валентина Генова, арх. Диана Андреева, арх. Иван Тончев, арх. Емил Христов, арх. Михаил Стойчев",
+        "start date": "2008-05-01",
+        "start month": "05",
+        "start year": "2008",
+        "end date": "2013-04-01",
+        "end month": "04",
+        "end year": "2013",
+        "description": "Дейности: Проектиране на жилищни, обществени и промишлени сгради. Реконструкция на банкови офиси, жилищни интериори.",
+        "bullets": [
+            "извършване на огледи и заснемания;",
+            "изработка на чертежи, спецификации, детайли, 3D визуализации;",
+        ]
+    },
 ]
 
 exceptions = ["Linux", "PostgreSQL", ]

@@ -2,8 +2,8 @@
 
 <header>
   <div>
-    <h1 class="">YASEN SOTIROV</h1>
-    <h3>Python developer</h3>
+    <h1 class="">ЯСЕН СОТИРОВ</h1>
+    <h3>Архитект</h3>
   </div>
   <img src="/static/avatar.jpg" alt="avatar" />
 </header>
@@ -11,24 +11,44 @@
 <main>
   <div class="section-container">
     <div class="title-with-date">
-      <h3>SUMMARY</h3>
+      <h3>ЗА МЕН</h3>
     </div>
     <p>
-      I am a practical person who values common sense and pragmatic solutions.
-      From a young age, I have been driven by a strong sense of curiosity and a
-      love of learning. I believe that attention to detail and precision are key
-      to success.
+      Аз съм практичен човек, който цени здравия разум и прагматичните решения. От малък съм воден от силно любопитство и любов към ученето. Вярвам, че вниманието към детайла и прецизността са ключови за постигането на успех. Аз съм лоялен, с добра работна етика и комуникативни умения.
+      Възпитаник съм на Нов български университет и през 2011 г се дипломирах като магистър Архитект. През годините съм работил в различни архитектурни бюра и ремонтно-строителни фирми.
+      Имам богат опит в проектирането, реновирането, координиране със инженерните специалности, изготвяне на количествени семтки, изготвяне на План за управление на строителните отпадъци, изготвяне на проекти по част Пожарна безопасност (за жилища), 3D визуализиране, създаване на видео с виртуална разходка в обекта
     </p>
   </div>
 
+  <!-- ТЕХНИЧЕСКИ УМЕНИЯ -->
   <div class="section-container">
     <div class="title-with-date">
-      <h3>TECHNOLOGIES</h3>
+      <h3>ТЕХНИЧЕСКИ УМЕНИЯ</h3>
     </div>
 
-    <!-- TECHNOLOGIES -->
     <ul class="skill-list">
-      {% for tech, details in data.items() %}
+      {% for tech, details in tech_data.items() %}
+      <li class="skill">
+        <div class="skill-name">{{ tech }}</div>
+        <ul class="skill-description">
+          {% for detail in details %}
+          <li>{{ detail }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  
+  <!-- КОМПЮТЪРНИ УМЕНИЯ -->
+  <div class="section-container">
+    <div class="title-with-date">
+      <h3>КОМПЮТЪРНИ УМЕНИЯ</h3>
+    </div>
+
+    <ul class="skill-list">
+      {% for tech, details in soft_data.items() %}
       <li class="skill">
         <div class="skill-name">{{ tech }}</div>
         <ul class="skill-description">

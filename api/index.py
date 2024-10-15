@@ -5,7 +5,7 @@ here = os.path.dirname(__file__)
 
 sys.path.append(os.path.join(here, '..'))
 
-from flask import Flask, request, jsonify, session, make_response, render_template
+from flask import Flask, render_template
 from data import info
 
 
@@ -27,7 +27,7 @@ def used_tech():
 # HOME
 @app.route('/')
 def home():
-    return render_template('home.html', data=info.technologies, page='home')
+    return render_template('home.html', tech_data=info.tech_data, soft_data=info.soft_data, page='home')
 
 
 # PROJECTS

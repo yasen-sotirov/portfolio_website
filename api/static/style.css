@@ -172,6 +172,7 @@ h3 {
   font-family: Roboto slab;
   font-size: 24px;
   font-weight: 400;
+  max-width: 400px;
 }
 
 /* Page specific styles */
@@ -200,6 +201,8 @@ h3 {
   font-weight: bold;
 }
 /* Navbar end */
+
+
 
 /* Filtration start */
 .filiation {
@@ -240,6 +243,9 @@ h3 {
 }
 /* Filtration end */
 
+
+
+
 /* Header start */
 header {
   display: flex;
@@ -260,6 +266,9 @@ header img {
 }
 
 /* Header end */
+
+
+
 /* list items */
 .skill {
   padding-bottom: 18px;
@@ -300,6 +309,10 @@ ul.skill-description {
   font-size: 14px;
 }
 
+
+
+
+
 /* Section Container start */
 
 .section-container:not(:last-child) {
@@ -321,6 +334,9 @@ ul.ul-bullet li {
 }
 /* Section Container end */
 
+
+
+
 /* Contacts start */
 .contacts {
   margin: 50px 0 50px 20px;
@@ -328,6 +344,7 @@ ul.ul-bullet li {
   line-height: 33px;
 }
 /* Contacts end */
+
 
 .cv-container {
   margin-top: 50px;
@@ -347,6 +364,20 @@ ul.ul-bullet li {
 .cv-container a:hover {
   background-color: var(--gray);
 }
+
+
+/* ABOUT */
+.about {
+  text-indent: 30px;
+  font-size: medium;
+  margin-bottom: 72px;
+}
+
+.about p {
+  margin-bottom: 12px;
+}
+/* ABOUT end*/
+
 
 /* Footer start */
 footer {

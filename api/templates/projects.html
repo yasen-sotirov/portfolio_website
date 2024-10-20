@@ -9,7 +9,7 @@ content %}
   <div class="filiation">
     <!-- FILTERS -->
     <div class="filter">
-      <span>filter by:</span>
+      <span>филтър:</span>
 
       {% for current_tech in used_tech %}
       <form method="POST" action="/filter/{{ current_tech }}">
@@ -20,7 +20,7 @@ content %}
 
     <!-- COMPLEXITY -->
     <div class="filter">
-      <span>project type:</span>
+      <span>обхват:</span>
 
       {% for comp in ['simple', 'advanced'] %}
       <form method="POST" action="/complexity/{{ comp }}">
@@ -31,7 +31,7 @@ content %}
 
     <!-- RESULTS -->
     <div class="result">
-      result for:
+      резултати за:
       <span>{{ tag }}</span>
     </div>
   </div>

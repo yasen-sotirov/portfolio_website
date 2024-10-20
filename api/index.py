@@ -9,13 +9,14 @@ from flask import Flask, render_template
 from data import info
 
 
+
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static')
 
 
 # FUNCTIONS
 def used_tech():
     used_tech = []
-    for tech in info.technologies.keys():
+    for tech in info.soft_data.keys():
         if tech in info.exceptions:
             continue
         used_tech.append(tech)
@@ -89,6 +90,9 @@ def contacts():
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
 
+# Run on folder
+# python index.py
+# flask --app index run
 
 # pip3 freeze > requirements.txt
 # debug=False след деплоиване

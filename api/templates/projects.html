@@ -2,87 +2,92 @@
 content %}
 
 <header>
-  <h1>PROJECTS</h1>
+	<h1>ПРОЕКТИ</h1>
 </header>
 
 <main>
-  <div class="filiation">
-    <!-- FILTERS -->
-    <div class="filter">
-      <span>филтър:</span>
+	<div class="filiation">
+		<!-- FILTERS -->
+		<div class="filter">
+			<span>филтър:</span>
 
-      {% for current_tech in used_tech %}
-      <form method="POST" action="/filter/{{ current_tech }}">
-        <button type="submit">{{ current_tech }}</button>
-      </form>
-      {% endfor %}
-    </div>
+			{% for current_tech in used_tech %}
+			<form method="POST" action="/filter/{{ current_tech }}">
+				<button type="submit">{{ current_tech }}</button>
+			</form>
+			{% endfor %}
+		</div>
 
-    <!-- COMPLEXITY -->
-    <div class="filter">
-      <span>обхват:</span>
 
-      {% for comp in ['simple', 'advanced'] %}
-      <form method="POST" action="/complexity/{{ comp }}">
-        <button type="submit">{{ comp }}</button>
-      </form>
-      {% endfor %}
-    </div>
+		<!-- RESULTS -->
+		<div class="result">
+			резултати за:
+			<span>{{ tag }}</span>
+		</div>
+	</div>
 
-    <!-- RESULTS -->
-    <div class="result">
-      резултати за:
-      <span>{{ tag }}</span>
-    </div>
-  </div>
+	<!-- PROJECT -->
+	{% for project in data %}
+	<div class="section-container">
+		<div class="title-with-date">
+			<h3>{{ project["name"]}}</h3>
+			<div class="date">
+				<time datetime="{{ project['end date']}}">
+					{{ project['end month']}}/{{ project['end year'] }}
+				</time>
+			</div>
+		</div>
 
-  <!-- PROJECT -->
-  {% for project in data %}
-  <div class="section-container">
-    <div class="title-with-date">
-      <h3>{{ project["name"]}}</h3>
-      <div class="date">
-        <time datetime="{{ project['start date']}}"
-          >{{ project['start month']}}/{{ project['start year'] }}</time
-        >
-        -
-        <time datetime="{{ project['end date']}}"
-          >{{ project['end month']}}/{{ project['end year'] }}</time
-        >
-      </div>
-    </div>
+		<!-- DESCRIPTION -->
+		<p>{{ project['description']}}</p>
+		
+		
+		<!-- COVER PHOTO -->
+		{% if "cover" in project %}
+			<img 
+				class="cover"
+				src="{{ url_for('static', filename=project['cover']) }}" 
+				alt="снимка на обекта">
+		{% endif %}
 
-    <!-- DESCRIPTION & BULLETS -->
-    <p>{{ project['description']}}</p>
-    <ul class="ul-bullet">
-      <li>
-        <span>technologies:</span>
-        {% for tech in project['technologies'] %}
-        <span>{{ tech }}</span>
-        {% endfor %}
-      </li>
+		
+		<!-- BULLETS -->
+		<ul class="ul-bullet">
+			
+			<!-- USED PROGRAMS -->
+			<li>
+				<span>използвани програми:</span>
+				{% for tech in project['technologies'] %}
+					<span>{{ tech }}, </span>
+				{% endfor %}
+			</li>
 
-      <li>
-        <span>complexity: {{ project['complexity']}}</span>
-      </li>
 
-      <li>
-        <a target="_blank" href="{{ project['readme'] }}">readme</a>
-      </li>
+			<!-- PRESENTATION -->
+			<li>
+				<a target="_blank" href="{{ project['presentation'] }}">видео презентация</a>
+				<i class="fa-brands fa-youtube"></i>
+				<!-- icon from https://fontawesome.com/icons/youtube?f=brands&s=solid -->
+			</li>
 
-      <li>
-        <a target="_blank" href="{{ project['source code'] }}">source code</a
-        ><i class="fa-brands fa-github"> </i>
-      </li>
 
-      {% if "run code" in project %}
-      <li>
-        <a target="_blank" href="{{ project['run code'] }}">run code</a>
-      </li>
-      {% endif %}
-    </ul>
-  </div>
-  {% endfor %}
+			<!-- ADDRESS -->
+			<li>
+				<p>адрес: {{ project['address']}}</p>
+			</li>
+
+
+			<!-- SITE LINK -->
+			{% if "link" in project %}
+			<li>
+				<a target="_blank" href="{{ project['link'] }}">линк</a>
+			</li>
+			{% endif %}
+
+
+		</ul>
+	</div>
+	{% endfor %}
 </main>
 
 <script src="../static/script.js"></script>

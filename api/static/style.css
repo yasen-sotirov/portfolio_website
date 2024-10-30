@@ -386,3 +386,12 @@ footer {
   text-align: right;
 }
 /* Footer end */
+
+
+.cover {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}

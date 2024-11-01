@@ -7,6 +7,15 @@ content %}
 
 <main>
 	<div class="filiation">
+		<div class="project_description">
+			<h4>Представените проекти са реализирани от мен под ръководството на арх.С.Ризов, 
+				в сътрудничество с екип от инженери. Моят принос включва прецизната изработка на 
+				проектната документация и графичните материали, координация на различните специалности 
+				и активно участие в проектирането. Проектите обхващат задания от обществени поръчки и 
+				частни инвеститори.
+			</h4>
+		</div>
+
 		<!-- FILTERS -->
 		<div class="filter">
 			<span>филтър:</span>
@@ -39,8 +48,9 @@ content %}
 		</div>
 
 		<!-- DESCRIPTION -->
-		<p>{{ project['description']}}</p>
-		
+		<div class="project_description">
+			<p>{{ project['description']}}</p>
+		</div>
 		
 		<!-- COVER PHOTO -->
 		{% if "cover" in project %}

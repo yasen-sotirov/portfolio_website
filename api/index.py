@@ -87,6 +87,30 @@ def contacts():
 
 
 
+
+posts = [
+    {
+        "id": 1,
+        "title": "Първи пост",
+        "description": "Описание на първия пост.",
+        "images": ["image1.jpg", "image2.jpg", "image3.jpg"]
+    },
+    {
+        "id": 2,
+        "title": "Втори пост",
+        "description": "Описание на втория пост.",
+        "images": ["image4.jpg", "image5.jpg", "image6.jpg"]
+    },
+    # Добави повече постове при нужда
+]
+
+@app.route('/gallery')
+def index():
+    return render_template('gallery.html', posts=posts)
+
+
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
 
@@ -96,3 +120,5 @@ if __name__ == "__main__":
 
 # pip3 freeze > requirements.txt
 # debug=False след деплоиване
+
+

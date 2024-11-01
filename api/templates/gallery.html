@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.description }}</p>
+            
+            <!-- Първоначална снимка, която се вижда -->
+            <div class="gallery">
+                <img src="{{ url_for('static', filename='images/' + post.images[0]) }}" 
+                     class="thumbnail" 
+                     onclick="openModal({{ post.id }})" 
+                     alt="Thumbnail">
+            </div>
+
+            <!-- Модален прозорец с галерията -->
+            <div id="modal-{{ post.id }}" class="modal">
+                <span class="close" onclick="closeModal({{ post.id }})">&times;</span>
+                <div class="modal-content">
+                    {% for image in post.images %}
+                    <div class="slide">
+                        <img src="{{ url_for('static', filename='images/' + image) }}" alt="Image">
+                    </div>
+                    {% endfor %}
+                    <a class="prev" onclick="changeSlide(-1, {{ post.id }})">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1, {{ post.id }})">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

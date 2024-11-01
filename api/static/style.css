@@ -394,8 +394,8 @@ footer {
   width: 400px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
-
 
 
 .project_description h4{
@@ -421,11 +421,7 @@ footer {
 .post {
   margin-bottom: 40px;
 }
-.thumbnail {
-  width: 100%;
-  max-width: 300px;
-  cursor: pointer;
-}
+
 
 /* Модален прозорец */
 .modal {

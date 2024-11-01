@@ -53,17 +53,43 @@ content %}
 		</div>
 		
 		<!-- COVER PHOTO -->
-		{% if "cover" in project %}
-			<img 
+			<!-- <img 
 				class="cover"
 				src="{{ url_for('static', filename=project['cover']) }}" 
-				alt="снимка на обекта">
-		{% endif %}
+				onclick="openModal({{ project.id }})" 
+				alt="снимка на обекта"> -->
 
+				<img 
+				class="cover"
+				src="{{ url_for('static', filename=project['cover']) }}" 
+				onclick="openModal({{ project.id }})" 
+				alt="снимка на обекта">
+
+
+				
+		<!-- GALLERY -->
+			<!-- Модален прозорец с галерията -->
+			<div id="modal-{{ project.id }}" class="modal">
+				<span class="close" onclick="closeModal({{ project.id }})">&times;</span>
+				<div class="modal-content">
+						{% for image in project.gallery %}
+						<div class="slide">
+								<img src="{{ url_for('static', filename='images/' + image) }}" alt="Image">
+						</div>
+						{% endfor %}
+						<a class="prev" onclick="changeSlide(-1, {{ project.id }})">&#10094;</a>
+						<a class="next" onclick="changeSlide(1, {{ project.id }})">&#10095;</a>
+				</div>
+		</div>
+
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
 		
+
+
 		<!-- BULLETS -->
 		<ul class="ul-bullet">
 			
+
 			<!-- USED PROGRAMS -->
 			<li>
 				<span>използвани програми:</span>

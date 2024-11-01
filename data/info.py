@@ -13,13 +13,14 @@ projects = [
     # },
     # КЪЩА ЛЮЦКАНОВИ 230512
     {
+    "id": 1,
     "name": 'Къща част от затворен комплекс',
     "end date": "2023-05-12",
     "end month": "05",
     "end year": "2023",
     "description": "Луксозна къща с лятна кухня, част от затворен комплекс. Проектът включва хол през две нива, спа зона и работни кабинети и жилищни помещения. По желание на клиента беше изпълнена симулация на целодневното ослънчаването в хола и интерактивна презентация с включени 2D, 3D и виртуална реалност",
-    "cover": "kashta_german.jpg",
-    "gallery": [],
+    "cover": "images/kashta_german/cover_image.jpg",
+    "gallery": ["/kashta_german/image1.jpg", "/kashta_german/image2.jpg"],
     "technologies": ["Autocad", "Archicad"],
     "presentation": "",
     "address": "с. Герман",

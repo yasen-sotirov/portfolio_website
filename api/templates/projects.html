@@ -1,130 +1,116 @@
-{% extends "base.html" %} {% block title %}Projects{% endblock %} {% block
-content %}
+{% extends "base.html" %} 
+{% block title %}Projects{% endblock %} 
+{% block content %}
 
 <header>
-	<h1>ПРОЕКТИ</h1>
+  <h1>ПРОЕКТИ</h1>
 </header>
 
 <main>
-	<div class="filiation">
-		<div class="project_description">
-			<h4>Представените проекти са реализирани от мен под ръководството на арх.С.Ризов, 
-				в сътрудничество с екип от инженери. Моят принос включва прецизната изработка на 
-				проектната документация и графичните материали, координация на различните специалности 
-				и активно участие в проектирането. Проектите обхващат задания от обществени поръчки и 
-				частни инвеститори.
-			</h4>
-		</div>
-
-		<!-- FILTERS -->
-		<div class="filter">
-			<span>филтър:</span>
-
-			{% for current_tech in used_tech %}
-			<form method="POST" action="/filter/{{ current_tech }}">
-				<button type="submit">{{ current_tech }}</button>
-			</form>
-			{% endfor %}
-		</div>
+    <div class="filiation">
+            <div class="project_description">
+                <h4>
+                    Представените проекти са реализирани от мен под ръководството на арх.С.Ризов, в сътрудничество 
+                    с екип от инженери. Моят принос включва прецизната изработка на проектната документация и графичните 
+                    материали, координация на различните специалности и активно участие в проектирането. Проектите обхващат задания от обществени поръчки и частни инвеститори.
+                </h4>
+            </div>
 
 
-		<!-- RESULTS -->
-		<div class="result">
-			резултати за:
-			<span>{{ tag }}</span>
-		</div>
-	</div>
-
-	<!-- PROJECT -->
-	{% for project in data %}
-	<div class="section-container">
-		<div class="title-with-date">
-			<h3>{{ project["name"]}}</h3>
-			<div class="date">
-				<time datetime="{{ project['end date']}}">
-					{{ project['end month']}}/{{ project['end year'] }}
-				</time>
-			</div>
-		</div>
-
-		<!-- DESCRIPTION -->
-		<div class="project_description">
-			<p>{{ project['description']}}</p>
-		</div>
-		
-		<!-- COVER PHOTO -->
-			<!-- <img 
-				class="cover"
-				src="{{ url_for('static', filename=project['cover']) }}" 
-				onclick="openModal({{ project.id }})" 
-				alt="снимка на обекта"> -->
-
-				<img 
-				class="cover"
-				src="{{ url_for('static', filename=project['cover']) }}" 
-				onclick="openModal({{ project.id }})" 
-				alt="снимка на обекта">
+            <!-- FILTERS -->
+            <div class="filter">
+                <span>филтър:</span>
+                {% for current_tech in used_tech %}
+                <form method="POST" action="/filter/{{ current_tech }}">
+                    <button type="submit">{{ current_tech }}</button>
+                </form>
+                {% endfor %}
+            </div>
 
 
-				
-		<!-- GALLERY -->
-			<!-- Модален прозорец с галерията -->
-			<div id="modal-{{ project.id }}" class="modal">
-				<span class="close" onclick="closeModal({{ project.id }})">&times;</span>
-				<div class="modal-content">
-						{% for image in project.gallery %}
-						<div class="slide">
-								<img src="{{ url_for('static', filename='images/' + image) }}" alt="Image">
-						</div>
-						{% endfor %}
-						<a class="prev" onclick="changeSlide(-1, {{ project.id }})">&#10094;</a>
-						<a class="next" onclick="changeSlide(1, {{ project.id }})">&#10095;</a>
-				</div>
-		</div>
+            <!-- RESULTS -->
+            <div class="result">
+                резултати за: <span>{{ tag }}</span>
+            </div>
+        </div>
 
-	<script src="{{ url_for('static', filename='script.js') }}"></script>
-		
-
-
-		<!-- BULLETS -->
-		<ul class="ul-bullet">
-			
-
-			<!-- USED PROGRAMS -->
-			<li>
-				<span>използвани програми:</span>
-				{% for tech in project['technologies'] %}
-					<span>{{ tech }}, </span>
-				{% endfor %}
-			</li>
+        <!-- PROJECTS -->
+        {% for project in data %}
+        <div class="section-container">
+            <div class="title-with-date">
+            <h3>{{ project.name }}</h3>
+            <div class="date">
+                <time datetime="{{ project['end date'] }}">
+                    {{ project['end month'] }}/{{ project['end year'] }}
+                </time>
+            </div>
+        </div>
 
 
-			<!-- PRESENTATION -->
-			<li>
-				<a target="_blank" href="{{ project['presentation'] }}">видео презентация</a>
-				<i class="fa-brands fa-youtube"></i>
-				<!-- icon from https://fontawesome.com/icons/youtube?f=brands&s=solid -->
-			</li>
+        <!-- DESCRIPTION -->
+        <div class="project_description">
+            <p>{{ project.description }}</p>
+        </div>
 
 
-			<!-- ADDRESS -->
-			<li>
-				<p>адрес: {{ project['address']}}</p>
-			</li>
+        <!-- COVER PHOTO -->
+        <img
+            class="cover"
+            src="{{ url_for('static', filename='images/' + project.cover) }}"
+            onclick="openModal({{ project.id }})"
+            alt="снимка на обекта"
+            />
 
 
-			<!-- SITE LINK -->
-			{% if "link" in project %}
-			<li>
-				<a target="_blank" href="{{ project['link'] }}">линк</a>
-			</li>
-			{% endif %}
+        <!-- GALLERY MODAL -->
+        <div id="modal-{{ project.id }}" class="modal">
+            <span class="close" onclick="closeModal({{ project.id }})">&times;</span>
+            <div class="modal-content">
+                {% for image in project.gallery %}
+                <div class="slide">
+                <img src="{{ url_for('static', filename='images/' + image) }}" alt="Image" />
+                </div>
+                {% endfor %}
+                <a class="prev" onclick="changeSlide(-1, {{ project.id }})">&#10094;</a>
+                <a class="next" onclick="changeSlide(1, {{ project.id }})">&#10095;</a>
+            </div>
+        </div>
 
 
-		</ul>
-	</div>
-	{% endfor %}
+        <!-- BULLETS -->
+        <ul class="ul-bullet">
+            <!-- USED TECHNOLOGIES -->
+            <li><span>използвани програми:</span> {{ project.technologies | join(', ') }}</li>
+
+
+            <!-- PRESENTATION -->
+            {% if project.presentation %}
+            <li>
+                <a target="_blank" href="{{ project.presentation }}">видео презентация</a>
+                <i class="fa-brands fa-youtube"></i>
+            </li>
+            {% endif %}
+
+
+            <!-- ADDRESS -->
+            {% if project.address %}
+            <li>
+                <p>адрес: {{ project.address }}</p>
+            </li>
+            {% endif %}
+
+
+            <!-- SITE LINK -->
+            {% if project.link %}
+            <li>
+                уеб сайт на обекта:
+                <a target="_blank" href="{{ project.link }}">линк</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endfor %}
 </main>
 
-<script src="../static/script.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
 {% endblock %}

@@ -10,6 +10,20 @@ function closeModal(postId) {
     document.getElementById(`modal-${postId}`).style.display = "none";
 }
 
+// затваряне с Esc
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        // Намерете всички отворени модални прозорци и ги затворете
+        const openModals = document.querySelectorAll(".modal");
+        openModals.forEach(modal => {
+            if (modal.style.display === "block") {
+                modal.style.display = "none";
+            }
+        });
+    }
+});
+
+
 function changeSlide(n, postId) {
     slideIndex[postId] += n;
     showSlides(postId);
@@ -23,3 +37,5 @@ function showSlides(postId) {
         slide.style.display = (index === slideIndex[postId] - 1) ? "block" : "none";
     });
 }
+
+

@@ -94,7 +94,7 @@ projects = [
                     включително и тавански скосени стаи. В линка по-долу можете да видите и видео представяне.""",
     "cover": "calculator/00.jpg",
     "gallery": ["/calculator/00.jpg", ],
-    "technologies": ["MS_Office", "automation", ],
+    "technologies": ["automation", ],
     "presentation": "https://youtu.be/L6cfmNA_J-s",
     },
 
@@ -194,6 +194,7 @@ projects = [
     "technologies": ["Autocad", "automation", ],
     "presentation": "https://youtu.be/-0vN-n0wpHw",
     },
+
 
     # СОУ ЛУКОВИТ 190603
     {
@@ -416,6 +417,8 @@ experience = [
     },
 ]
 
-filters = ["Archicad", "Autocad", "Lumion", "MS_Office", "automation",]
 
-exceptions = ["3DS Max", "Photoshop"]
+filters = ["Archicad", "Autocad", "Lumion", "automation",]
+
+
+# exceptions = ["3DS Max", "Photoshop"]

@@ -18,7 +18,6 @@ projects = [
         "/kashta_german/03.jpg"
         ],
     "technologies": ["Autocad", "Archicad"],
-    "presentation": "",
     "address": "с. Герман",
     },
 
@@ -50,7 +49,6 @@ projects = [
         "/sad_stamboliiski/08.jpg", 
         ],
     "technologies": ["Autocad", "Archicad"],
-    "presentation": "",
     "address": "София, бул. Стамболийски",
     },
 
@@ -76,7 +74,6 @@ projects = [
         "/edno_vreme/04.jpg", 
         ],
     "technologies": ["Archicad", "Autocad", ],
-    "presentation": "",
     "address": "Карлово, ул.Раковска 7",
     "link": "https://ednovreme.eu/",
     },
@@ -97,7 +94,7 @@ projects = [
                     включително и тавански скосени стаи. В линка по-долу можете да видите и видео представяне.""",
     "cover": "calculator/00.jpg",
     "gallery": ["/calculator/00.jpg", ],
-    "technologies": ["MS Office", "автоматизация", ],
+    "technologies": ["MS_Office", "automation", ],
     "presentation": "https://youtu.be/L6cfmNA_J-s",
     },
 
@@ -123,7 +120,6 @@ projects = [
         "/kashta_osoica/04.jpg", 
         "/kashta_osoica/05.jpg", ],
     "technologies": ["Autocad", "Archicad", ],
-    "presentation": "",
     "address": "с. Осойца",
     },
 
@@ -139,7 +135,6 @@ projects = [
     "cover": "plovdiv_aprilov/00.jpg", 
     "gallery": ["/plovdiv_aprilov/00.jpg", "/plovdiv_aprilov/01.jpg", "/plovdiv_aprilov/02.jpg", ],
     "technologies": ["Autocad", ],
-    "presentation": "",
     "address": "Пловдив, бул.Васил Априлов", 
     },
 
@@ -176,7 +171,6 @@ projects = [
     "cover": "cop_varna/00.jpg", 
     "gallery": ["/cop_varna/00.jpg", "/cop_varna/01.jpg", "/cop_varna/02.jpg", ],
     "technologies": ["Autocad", ],
-    "presentation": "",
     "address": "Варна, кв. „Аспарухово“, блок 11,",
     "link": "https://live.varna.bg/bg/news/dneven_centar_za_palnoletni_lica_s_tejki_uvrejdania_zapochva_rabota_ot_parvi_april.html",    
     },
@@ -197,7 +191,7 @@ projects = [
                     разликите във височините между тях. В линка по-долу можете да видите и видео представяне.""",
     "cover": "koti/00.jpg",
     "gallery": ["/koti/00.jpg", ],
-    "technologies": ["Autocad", "автоматизация", ],
+    "technologies": ["Autocad", "automation", ],
     "presentation": "https://youtu.be/-0vN-n0wpHw",
     },
 
@@ -223,7 +217,6 @@ projects = [
         "/sou_konstantinov/06.jpg", 
         ],
     "technologies": ["Autocad", ],
-    "presentation": "",
     "address": "Луковит, ул. Възраждане 104",
     "link": "https://su-lukovit.com/c-priem",    
     },
@@ -244,8 +237,7 @@ projects = [
                 медицинско и рехабилитационно обзавеждане според зададени функции.""",
     "cover": "cop_plovdiv/00.jpg", 
     "gallery": ["/cop_plovdiv/00.jpg", "/cop_plovdiv/01.jpg", "/cop_plovdiv/02.jpg", "/cop_plovdiv/03.jpg", "/cop_plovdiv/04.jpg", "/cop_plovdiv/05.jpg" ],
-    "technologies": ["Autocad", "MS Office"],
-    "presentation": "",
+    "technologies": ["Autocad", ],
     "address": "Пловдив, ул. Димитър Цончев № 11",
     "link": "https://detebg.org/",    
     },
@@ -262,7 +254,6 @@ projects = [
     "cover": "lotos/00.jpg",
     "gallery": ["/lotos/00.jpg", "/lotos/01.jpg", "/lotos/02.jpg", "/lotos/03.jpg", ],
     "technologies": ["Autocad", ],
-    "presentation": "",
     "address": "Пловдив, ул. Лотос",   
     },
 
@@ -282,7 +273,7 @@ projects = [
                     са еднакви стойностите. В линка по-долу можете да видите и видео представяне.""",
     "cover": "tablica/00.jpg",
     "gallery": ["/tablica/00.jpg", ],
-    "technologies": ["Autocad", "автоматизация", ],
+    "technologies": ["Autocad", "automation", ],
     "presentation": "https://youtu.be/corOU_mOm8Q",
     },
 
@@ -298,7 +289,6 @@ projects = [
     "cover": "pharmacy/00.jpg", 
     "gallery": ["/pharmacy/00.jpg", "/pharmacy/01.jpg", "/pharmacy/02.jpg", ],
     "technologies": ["Autocad", ],
-    "presentation": "",
     "address": "гара Верила",  
     },
 
@@ -319,7 +309,6 @@ projects = [
     "cover": "dna_slivnitsa/00.jpg", 
     "gallery": ["/dna_slivnitsa/00.jpg", "/dna_slivnitsa/01.jpg", "/dna_slivnitsa/02.jpg", "/dna_slivnitsa/03.jpg", "/dna_slivnitsa/04.jpg", ],
     "technologies": ["Autocad", ],
-    "presentation": "",
     "address": "Сливница, ул. Паисий Хилендарски",   
     }
 ]
@@ -427,5 +416,6 @@ experience = [
     },
 ]
 
+filters = ["Archicad", "Autocad", "Lumion", "MS_Office", "automation",]
 
 exceptions = ["3DS Max", "Photoshop"]

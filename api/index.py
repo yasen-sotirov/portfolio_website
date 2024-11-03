@@ -14,13 +14,13 @@ app = Flask(__name__, template_folder='templates', static_folder='static', stati
 
 
 # FUNCTIONS
-def used_tech():
-    used_tech = []
-    for tech in info.soft_data.keys():
-        if tech in info.exceptions:
-            continue
-        used_tech.append(tech)
-    return used_tech
+# def used_tech():
+#     used_tech = []
+#     for tech in info.soft_data.keys():
+#         if tech in info.exceptions:
+#             continue
+#         used_tech.append(tech)
+#     return used_tech
 
 
 
@@ -34,7 +34,8 @@ def home():
 # PROJECTS
 @app.route('/projects')
 def projects():
-    used = used_tech()
+    # used = used_tech()
+    used = info.filters
     return render_template('projects.html', 
                            data=info.projects, 
                            tag='All', 
@@ -45,7 +46,8 @@ def projects():
 # FILTER TECHNOLOGIES
 @app.route('/filter/<current_tech>', methods=['POST'])
 def button_filter(current_tech):
-    used = used_tech()   
+    # used = used_tech()  
+    used = info.filters 
     filtered_projects_ls = []
     for project in info.projects:
         if current_tech in project['technologies']:
@@ -60,7 +62,8 @@ def button_filter(current_tech):
 # PROJECT COMPLEXITY
 @app.route('/complexity/<comp_tag>', methods=['POST'])
 def button_complexity(comp_tag):
-    used = used_tech() 
+    # used = used_tech() 
+    used = info.filters
     filtered_projects_ls = []
     for project in info.projects:
         if comp_tag == project['complexity']:

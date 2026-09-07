@@ -1,4 +1,31 @@
 projects = [
+
+
+    # СОЦИАЛНИ ШУМЕН
+    {
+    "id": 17,
+    "name": 'Ресторант за бързо хранене Hesburger',
+    "end date": "2025-04-23",
+    "end month": "04",
+    "end year": "2025",
+    "description": """Проектът предвижда изграждане на ресторант за бързо хранене до с. Чучулигово, общ. Петрич""",
+    
+    "cover": "kulata/00.jpg",
+    "gallery": [
+        "/kulata/00.jpg", 
+        "/kulata/01.jpg", 
+        "/kulata/02.jpg", 
+        "/kulata/03.jpg",
+        "/kulata/04.jpg",
+        "/kulata/05.jpg",
+        ],
+    "technologies": ["Archicad"],
+    "address": "с. Чучулигово, общ. Петрич",
+    },
+
+
+
+
     # СОЦИАЛНИ ШУМЕН
     {
     "id": 16,
@@ -25,6 +52,7 @@ projects = [
     },
 
 
+
     # КЪЩА ЛЮЦКАНОВИ 230512
     {
     "id": 15,
@@ -46,6 +74,8 @@ projects = [
     "technologies": ["Autocad", "Archicad"],
     "address": "с. Герман",
     },
+
+
 
 
     # СЪД СТАМБОЛИЙСКИ 230512
@@ -79,6 +109,8 @@ projects = [
     },
 
 
+
+
     # ЕДНО ВРЕМЕ 220805
     {
     "id": 13,
@@ -105,6 +137,8 @@ projects = [
     },
 
 
+
+
     # КАЛКУЛАТОР ЗА ПЛОЩИ
     {
     "id": 12,
@@ -123,6 +157,8 @@ projects = [
     "technologies": ["automation", ],
     "presentation": "https://youtu.be/L6cfmNA_J-s",
     },
+
+
 
 
     # КЪЩА ОСОИЦА
@@ -150,6 +186,8 @@ projects = [
     },
 
 
+
+
     # ЕЕ ВАСИЛ АПРИЛОВ 220324
     {
     "id": 10,
@@ -167,6 +205,8 @@ projects = [
     },
 
 
+
+
     # 3D ИЛИНДЕН 220218
     {
     "id": 9,
@@ -181,6 +221,8 @@ projects = [
     "presentation": "https://youtu.be/zj62q2KO0ik",
     "address": "София, кв. Илинден",    
     },
+
+
 
 
     # ЦОП ВАРНА 200331
@@ -204,6 +246,8 @@ projects = [
     },
 
 
+
+
     # АВТОМАТИЧНИ КОТИ
     {
     "id": 7,
@@ -222,6 +266,8 @@ projects = [
     "technologies": ["Autocad", "automation", ],
     "presentation": "https://youtu.be/-0vN-n0wpHw",
     },
+
+
 
 
     # СОУ ЛУКОВИТ 190603
@@ -251,6 +297,8 @@ projects = [
     },
 
 
+
+
     # ЦОП ПЛОВДИВ 190311
     {
     "id": 5,
@@ -272,6 +320,8 @@ projects = [
     },
 
 
+
+
     # ЕЕ ПЛОВДИВ ЛОТОС 180709
     {
     "id": 4,
@@ -287,6 +337,8 @@ projects = [
     "technologies": ["Autocad", ],
     "address": "Пловдив, ул. Лотос",   
     },
+
+
 
 
     # АВТОМАТИЧНА ТАБЛИЦА ПОД, СТЕНИ, ТАВАН
@@ -309,6 +361,8 @@ projects = [
     },
 
 
+
+
     # АПТЕЧЕН СКЛАД 180130
     {
     "id": 2,
@@ -325,6 +379,8 @@ projects = [
     "technologies": ["Autocad", ],
     "address": "гара Верила",  
     },
+
+
 
 
     # ДНА СЛИВНИЦА 160925

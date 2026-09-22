@@ -46,6 +46,7 @@ projects = [
         "/socialni/02.jpg", 
         "/socialni/03.jpg",
         "/socialni/04.jpg",
+        "/socialni/05.jpg",
         ],
     "technologies": ["Autocad", "Archicad"],
     "address": "с. Царев брод",
@@ -510,5 +511,5 @@ experience = [
 ]
 
 
-filters = ["Archicad", "Autocad", "Lumion", "automation",]
+filters = ["Archicad", "Revit", "Autocad", "Lumion", "automation",]
 

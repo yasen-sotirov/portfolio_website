@@ -74,8 +74,9 @@ projects = [
         "/socialni/03.jpg",
         "/socialni/04.jpg",
         "/socialni/05.jpg",
+        "/socialni/06.jpg",
         ],
-    "technologies": ["Autocad", "Archicad"],
+    "technologies": ["Autocad", "Revit"],
     "address": "с. Царев брод",
     },
 
